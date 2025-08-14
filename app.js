@@ -158,7 +158,6 @@ class MysticJeremyWatsonApp {
     this.setupInteractiveCursor()
     this.setupFloatingOrbs()
     this.setupScrollEffects()
-    this.setupCTAButtons()
     this.setupParticleSystem()
     this.setupGlitchEffects()
     this.setupTypingEffect()
@@ -531,43 +530,7 @@ class MysticJeremyWatsonApp {
     })
   }
 
-  setupCTAButtons() {
-    const primaryCTA = document.querySelector(".cta-primary")
-    const secondaryCTA = document.querySelector(".cta-secondary")
 
-    if (primaryCTA) {
-      primaryCTA.addEventListener("click", (e) => {
-        e.preventDefault()
-        this.createButtonExplosion(primaryCTA)
-        this.trackEvent("CTA", "Primary Button Click", "Jeremy Watson Calendar")
-        setTimeout(() => {
-          window.open("https://calendly.com/pressence360-jeremy", "_blank")
-        }, 300)
-      })
-
-      primaryCTA.addEventListener("mouseenter", () => {
-        this.createButtonParticles(primaryCTA)
-      })
-    }
-
-    if (secondaryCTA) {
-      secondaryCTA.addEventListener("click", (e) => {
-        e.preventDefault()
-        this.createButtonExplosion(secondaryCTA)
-        this.trackEvent("CTA", "Secondary Button Click", "Jeremy Watson Email")
-        setTimeout(() => {
-          window.open(
-            "mailto:hello@pressence360.com?subject=Jeremy Watson - Ready to Dominate Taranaki Media&body=Hi, I'm Jeremy Watson and I'm ready to establish my media authority as an independent real estate agent in New Plymouth. Let's discuss how Pressence360 can help me get featured in NZ Herald, Stuff, and other major publications.",
-            "_blank",
-          )
-        }, 300)
-      })
-
-      secondaryCTA.addEventListener("mouseenter", () => {
-        this.createButtonParticles(secondaryCTA)
-      })
-    }
-  }
 
   createButtonExplosion(button) {
     const rect = button.getBoundingClientRect()
@@ -878,19 +841,7 @@ class MysticJeremyWatsonApp {
 // Initialize the enhanced mystic app
 window.mysticJeremyApp = new MysticJeremyWatsonApp()
 
-// Global functions for CTA buttons (backup)
-window.openCalendar = () => {
-  console.log("Opening calendar via global function...")
-  window.open("https://calendly.com/pressence360-jeremy", "_blank")
-}
 
-window.openEmail = () => {
-  console.log("Opening email via global function...")
-  window.open(
-    "mailto:hello@pressence360.com?subject=Jeremy Watson - Ready to Dominate Taranaki Media&body=Hi, I'm Jeremy Watson and I'm ready to establish my media authority as an independent real estate agent in New Plymouth. Let's discuss how Pressence360 can help me get featured in NZ Herald, Stuff, and other major publications.",
-    "_blank",
-  )
-}
 
 // Enhanced page title effect
 document.addEventListener("DOMContentLoaded", () => {
