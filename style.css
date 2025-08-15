@@ -581,6 +581,18 @@ body, h1, h2, h3, h4, h5, h6,
   box-shadow: var(--glow-secondary);
 }
 
+.media-logo {
+  height: 22px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: grayscale(100%) contrast(1.05) brightness(1.05);
+}
+
+.media-badge:hover .media-logo {
+  filter: none;
+}
+
 .media-mark {
   font-weight: 700;
   letter-spacing: 0.02em;
