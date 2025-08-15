@@ -30,6 +30,7 @@
                 </div>
                 <h2 class="hero-title typing-effect">Nick Hughes</h2>
                 <h3 class="hero-subtitle fade-in-up">Media Authority Blueprint</h3>
+                <p class="hero-kicker fade-in-up">Top #3 in NZ · #1 Auction Lister · 4.9★ client rating</p>
                 <p class="hero-description fade-in-up">
                     <strong class="highlight-glow">Don't chase leads — attract them.</strong> Your results are elite. This blueprint shows how to turn that dominance into <em>unavoidable</em> authority — so sellers come to you first.
                 </p>
@@ -128,6 +129,15 @@
                 <span class="media-badge media-badge--stuff" aria-label="Stuff" title="Stuff">
                     <span class="media-mark">Stuff</span>
                 </span>
+                <span class="media-badge media-badge--tvnz" aria-label="TVNZ1" title="TVNZ1">
+                    <span class="media-mark">TVNZ1</span>
+                </span>
+                <span class="media-badge media-badge--newshub" aria-label="Newshub" title="Newshub">
+                    <span class="media-mark">Newshub</span>
+                </span>
+                <span class="media-badge media-badge--tdn" aria-label="Taranaki Daily News" title="Taranaki Daily News">
+                    <span class="media-mark">TDN</span>
+                </span>
             </div>
 
             <!-- Example analytics dashboard (client: Misha Ezaratti) -->
@@ -214,18 +224,32 @@
             <p class="section-subtitle">You’ve got the numbers. Here’s how we turn them into market‑moving articles and interviews that magnetise sellers.</p>
             
             <div class="projection-mockups">
-                <div class="mockup-headline interactive-card">
-                    <div class="publication-header">NZ Herald - Property</div>
-                    <h3>"New Plymouth’s Top Performer Nick Hughes on Market Momentum and Premium Presentation"</h3>
-                    <p class="mockup-excerpt">Authority positioning via national outlets — you become the headline, not just the listing agent.</p>
-                    <div class="card-glow blue-glow"></div>
-                </div>
-
-                <div class="mockup-headline interactive-card">
-                    <div class="publication-header">Stuff</div>
-                    <h3>"How Nick Hughes Sold 44 Homes in 24 Months — The Playbook Behind the Results"</h3>
-                    <p class="mockup-excerpt">Turn past performance into future demand — strategic features that make the decision easy for vendors.</p>
-                    <div class="card-glow purple-glow"></div>
+                <div class="carousel" aria-label="Projected features carousel">
+                    <div class="carousel-track">
+                        <div class="mockup-headline interactive-card carousel-slide is-active">
+                            <div class="publication-header">NZ Herald - Property</div>
+                            <h3>"New Plymouth’s Top Performer Nick Hughes on Market Momentum and Premium Presentation"</h3>
+                            <p class="mockup-excerpt">Authority positioning via national outlets — you become the headline, not just the listing agent.</p>
+                            <div class="card-glow blue-glow"></div>
+                        </div>
+                        <div class="mockup-headline interactive-card carousel-slide">
+                            <div class="publication-header">Stuff</div>
+                            <h3>"How Nick Hughes Sold 44 Homes in 24 Months — The Playbook Behind the Results"</h3>
+                            <p class="mockup-excerpt">Turn past performance into future demand — strategic features that make the decision easy for vendors.</p>
+                            <div class="card-glow purple-glow"></div>
+                        </div>
+                        <div class="mockup-headline interactive-card carousel-slide">
+                            <div class="publication-header">Taranaki Daily News</div>
+                            <h3>"Local Insights from Nick Hughes: Premium Presentation Wins in Any Market"</h3>
+                            <p class="mockup-excerpt">Local trust fuels action — consistent presence makes you the default choice.</p>
+                            <div class="card-glow gold-glow"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-dots" role="tablist" aria-label="carousel navigation">
+                        <button class="carousel-dot is-active" aria-label="Slide 1"></button>
+                        <button class="carousel-dot" aria-label="Slide 2"></button>
+                        <button class="carousel-dot" aria-label="Slide 3"></button>
+                    </div>
                 </div>
             </div>
 
@@ -248,6 +272,33 @@
                 <div class="metric interactive-card">
                     <span class="metric-number">$<span class="counter-animation" data-count="180">0</span>K</span>
                     <span class="metric-label">Annual Media Value</span>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before vs After Authority -->
+    <section class="before-after">
+        <div class="container">
+            <h2 class="section-title reveal-text">What Changes When You’re The Headline</h2>
+            <div class="before-after-grid">
+                <div class="interactive-card">
+                    <h3 class="ba-title">Before</h3>
+                    <ul class="animated-list">
+                        <li>Competing on fees and marketing inclusions</li>
+                        <li>Vendors compare you to “similar agents”</li>
+                        <li>Outbound effort to generate qualified listings</li>
+                    </ul>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="interactive-card">
+                    <h3 class="ba-title">After Authority</h3>
+                    <ul class="animated-list">
+                        <li>Vendors seek you out for leadership</li>
+                        <li>Higher trust, faster decisions, stronger reserve</li>
+                        <li>Inbound listings driven by media presence</li>
+                    </ul>
                     <div class="card-glow"></div>
                 </div>
             </div>
@@ -311,6 +362,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox for analytics demo -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close">×</button>
+        <img class="lightbox-image" alt="Analytics dashboard enlarged">
+    </div>
 
     <script src="app.js"></script>
 </body>

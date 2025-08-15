@@ -162,6 +162,7 @@ class MysticNickHughesApp {
     this.renderKeyPublications()
     this.renderAllPublications()
     this.renderTestimonials()
+    this.setupCarousel()
     this.setupEnhancedAnimations()
     this.setupInteractiveCursor()
     this.setupFloatingOrbs()
@@ -170,6 +171,7 @@ class MysticNickHughesApp {
     this.setupGlitchEffects()
     this.setupTypingEffect()
     this.addTimeBasedPersonalization()
+    this.setupLightbox()
     this.startAnimationLoop()
   }
 
@@ -811,6 +813,62 @@ class MysticNickHughesApp {
       this.animationFrame = requestAnimationFrame(animate)
     }
     animate()
+  }
+
+  setupCarousel() {
+    const track = document.querySelector('.carousel-track')
+    const slides = document.querySelectorAll('.carousel-slide')
+    const dots = document.querySelectorAll('.carousel-dot')
+    if (!track || slides.length === 0) return
+
+    let index = 0
+    const activate = (i) => {
+      slides.forEach((s, idx) => s.classList.toggle('is-active', idx === i))
+      dots.forEach((d, idx) => d.classList.toggle('is-active', idx === i))
+    }
+    activate(index)
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        index = i
+        activate(index)
+        this.trackEvent('carousel', 'dot_click', `slide_${index + 1}`)
+      })
+    })
+
+    setInterval(() => {
+      index = (index + 1) % slides.length
+      activate(index)
+    }, 5000)
+  }
+
+  setupLightbox() {
+    const img = document.querySelector('.analytics-image')
+    const lightbox = document.getElementById('lightbox')
+    const lbImg = document.querySelector('.lightbox-image')
+    const closeBtn = document.querySelector('.lightbox-close')
+    if (!img || !lightbox || !lbImg || !closeBtn) return
+
+    img.style.cursor = 'zoom-in'
+    img.addEventListener('click', () => {
+      lbImg.src = img.src
+      lightbox.classList.add('active')
+      lightbox.setAttribute('aria-hidden', 'false')
+    })
+
+    const close = () => {
+      lightbox.classList.remove('active')
+      lightbox.setAttribute('aria-hidden', 'true')
+      lbImg.removeAttribute('src')
+    }
+
+    closeBtn.addEventListener('click', close)
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) close()
+    })
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close()
+    })
   }
 
   trackEvent(category, action, label) {

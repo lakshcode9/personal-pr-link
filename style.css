@@ -446,6 +446,12 @@ body {
   max-width: 800px;
 }
 
+.hero-kicker {
+  margin-top: var(--space-sm);
+  color: var(--color-light);
+  font-size: 0.95rem;
+}
+
 .brand-logo {
   position: relative;
   margin-bottom: var(--space-xl);
@@ -558,6 +564,12 @@ body {
 }
 
 .media-badge--stuff .media-mark {
+  font-family: var(--font-primary);
+}
+
+.media-badge--tvnz .media-mark,
+.media-badge--newshub .media-mark,
+.media-badge--tdn .media-mark {
   font-family: var(--font-primary);
 }
 
@@ -702,6 +714,49 @@ body {
   color: var(--color-light);
   font-style: italic;
   margin-top: var(--space-md);
+}
+
+/* Before After */
+.before-after {
+  padding: var(--space-3xl) 0;
+}
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+.ba-title {
+  margin-bottom: var(--space-md);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+.lightbox.active { display: flex; }
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: var(--glow-primary);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--color-white);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 
