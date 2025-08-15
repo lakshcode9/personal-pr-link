@@ -172,7 +172,7 @@ class MysticNickHughesApp {
     this.setupTypingEffect()
     this.addTimeBasedPersonalization()
     this.setupLightbox()
-    this.setupDecisionModal()
+    this.setupPhoneNumberLinks()
     this.startAnimationLoop()
 
     // GSAP immersive experience
@@ -962,27 +962,14 @@ class MysticNickHughesApp {
     })
   }
 
-  setupDecisionModal() {
-    const openers = document.querySelectorAll('[data-open-decision]')
-    const closers = document.querySelectorAll('[data-close-decision]')
-    const modal = document.getElementById('decisionModal')
-    if (!modal) return
-
-    const open = () => {
-      modal.classList.add('active')
-      modal.setAttribute('aria-hidden', 'false')
-      this.trackEvent('modal', 'open', 'decision')
-    }
-    const close = () => {
-      modal.classList.remove('active')
-      modal.setAttribute('aria-hidden', 'true')
-      this.trackEvent('modal', 'close', 'decision')
-    }
-
-    openers.forEach((btn) => btn.addEventListener('click', open))
-    closers.forEach((btn) => btn.addEventListener('click', close))
-    modal.addEventListener('click', (e) => { if (e.target === modal) close() })
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close() })
+  setupPhoneNumberLinks() {
+    // Track phone number clicks for analytics
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]')
+    phoneLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        this.trackEvent('phone', 'click', 'call_cta')
+      })
+    })
   }
 
   trackEvent(category, action, label) {

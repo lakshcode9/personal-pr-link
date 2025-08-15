@@ -916,22 +916,7 @@ body, h1, h2, h3, h4, h5, h6,
   margin-top: var(--space-md);
 }
 
-/* Decision modal */
-.decision-modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.7);
-  z-index: 10001;
-}
 
-.decision-modal.active { display: flex; }
-
-.decision-dialog {
-  max-width: 560px;
-}
 
 /* Unboxing Journey */
 .unboxing-journey {
