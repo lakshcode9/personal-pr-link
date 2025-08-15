@@ -67,6 +67,13 @@ body {
   cursor: none;
 }
 
+/* Force Saira Condensed across key text surfaces */
+body, h1, h2, h3, h4, h5, h6,
+.section-title, .hero-title, .hero-subtitle, .typing-effect,
+.publication-header, .interactive-btn, .stat-number, .stat-label {
+  font-family: "Saira Condensed", "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
 /* Mystic Background */
 .mystic-bg {
   position: fixed;
