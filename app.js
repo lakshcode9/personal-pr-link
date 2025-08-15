@@ -174,6 +174,9 @@ class MysticNickHughesApp {
     this.setupLightbox()
     this.setupDecisionModal()
     this.startAnimationLoop()
+
+    // GSAP immersive experience
+    this.setupGsapExperience()
   }
 
   renderKeyPublications() {
@@ -814,6 +817,93 @@ class MysticNickHughesApp {
       this.animationFrame = requestAnimationFrame(animate)
     }
     animate()
+  }
+
+  setupGsapExperience() {
+    if (typeof gsap === 'undefined') return
+    if (gsap && gsap.registerPlugin) {
+      try { gsap.registerPlugin(ScrollTrigger) } catch (e) {}
+    }
+
+    // Scroll progress bar
+    const progressBar = document.getElementById('scrollProgressBar')
+    if (progressBar && window.ScrollTrigger) {
+      ScrollTrigger.create({
+        start: 0,
+        end: 'max',
+        onUpdate: (self) => {
+          progressBar.style.width = `${Math.round(self.progress * 100)}%`
+        },
+      })
+    }
+
+    // Hero reveal
+    gsap.from('.hero .hero-content > *', {
+      opacity: 0,
+      y: 20,
+      stagger: 0.1,
+      duration: 0.8,
+      ease: 'power2.out',
+    })
+
+    // Section titles
+    document.querySelectorAll('.section-title').forEach((el) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: 'top 80%' },
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: 'power2.out',
+      })
+    })
+
+    // Cards float-in
+    document.querySelectorAll('.interactive-card').forEach((card) => {
+      gsap.from(card, {
+        scrollTrigger: { trigger: card, start: 'top 85%' },
+        opacity: 0,
+        y: 40,
+        duration: 0.6,
+        ease: 'power2.out',
+      })
+    })
+
+    // Parallax for mystic background
+    const mg = document.querySelector('.mystic-gradient')
+    if (mg && window.ScrollTrigger) {
+      gsap.to(mg, {
+        yPercent: -15,
+        ease: 'none',
+        scrollTrigger: { trigger: 'body', start: 'top top', end: 'max', scrub: true },
+      })
+    }
+
+    // NZ Herald mockup subtle zoom on view
+    const nzMock = document.getElementById('nzHeraldMockup')
+    if (nzMock) {
+      gsap.fromTo(
+        nzMock,
+        { scale: 0.96, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1,
+          ease: 'power2.out',
+          scrollTrigger: { trigger: '#nzHeraldFigure', start: 'top 80%' },
+        }
+      )
+    }
+
+    // Journey steps stagger
+    document.querySelectorAll('.journey-step').forEach((step, idx) => {
+      gsap.from(step, {
+        scrollTrigger: { trigger: step, start: 'top 85%' },
+        opacity: 0,
+        y: 30,
+        duration: 0.5,
+        delay: idx * 0.05,
+      })
+    })
   }
 
   setupCarousel() {
