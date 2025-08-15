@@ -26,8 +26,8 @@
   --glow-green: 0 0 20px rgba(255, 255, 255, 0.4);
 
   /* Typography */
-  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: "Playfair Display", serif;
+  --font-primary: "Saira Condensed", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Saira Condensed", "Playfair Display", serif;
 
   /* Spacing & Layout */
   --space-xs: 0.25rem;
