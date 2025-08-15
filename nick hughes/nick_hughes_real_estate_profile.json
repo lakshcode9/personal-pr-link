@@ -1,0 +1,132 @@
+{
+  "personal_info": {
+    "full_name": "Nick Hughes",
+    "profession": "Licensed Real Estate Salesperson",
+    "license_number": "REAA2008",
+    "location": "New Plymouth, Taranaki, New Zealand"
+  },
+  "contact_information": {
+    "mobile": "021 175 0211",
+    "alternative_mobile": "0211 75 0211",
+    "email": "nick@fntaranaki.co.nz",
+    "business_hours": "Monday-Sunday 7am-9pm",
+    "office_address": "127 Devon Street East, New Plymouth 4310, New Zealand",
+    "website": "https://nickhughesrealestate.co.nz/"
+  },
+  "professional_affiliations": {
+    "primary_agency": "First National Collective Taranaki",
+    "parent_company": "Mills Gibbon and Co Ltd (Licensed: REAA 2008)",
+    "office_location": "New Plymouth",
+    "region": "Taranaki"
+  },
+  "awards_achievements": {
+    "national_rankings": [
+      "#3 Salesperson in New Zealand",
+      "#1 Auction Lister in New Zealand"
+    ],
+    "awards": [
+      "Trade Me Property NZ Digital Excellence Winner"
+    ],
+    "client_satisfaction": {
+      "total_reviews": 68,
+      "average_rating": 4.9,
+      "rating_scale": "out of 5"
+    }
+  },
+  "service_areas": [
+    "Frankleigh Park",
+    "New Plymouth Westown",
+    "New Plymouth Whalers Gate",
+    "New Plymouth Spotswood",
+    "New Plymouth Lynmouth",
+    "New Plymouth Ferndale",
+    "New Plymouth Bell Block",
+    "New Plymouth Marfell",
+    "New Plymouth Merrilands",
+    "New Plymouth Highlands Park",
+    "New Plymouth Central",
+    "New Plymouth Moturoa",
+    "New Plymouth Blagdon",
+    "New Plymouth Welbourn",
+    "New Plymouth Hurdon",
+    "New Plymouth Strandon",
+    "New Plymouth Glen Avon",
+    "New Plymouth Brooklands"
+  ],
+  "marketing_specialties": {
+    "video_marketing": {
+      "description": "Specializes in high-definition video marketing for prestige properties",
+      "approach": "Uncovers finer details photos tend to miss, increases exposure and competition"
+    },
+    "social_media": {
+      "instagram": "@nickhughesrealestatespecialist",
+      "linkedin": "Available but specific handle not confirmed",
+      "approach": "Brings all properties to market via social, highly effective digital display"
+    },
+    "digital_excellence": "Trade Me Property NZ Digital Excellence Award winner"
+  },
+  "professional_approach": {
+    "key_attributes": [
+      "Passion and hard work ethic",
+      "Sharp negotiating skills",
+      "Confident approach",
+      "Active listener",
+      "Trustworthy and realistic",
+      "Ever-optimistic"
+    ],
+    "philosophy": "Success comes from listening rather than talking",
+    "availability": "Available 7 days a week"
+  },
+  "client_testimonials": [
+    {
+      "client": "Shaun Kearney",
+      "review": "Sales Excellence, Sold - Without prompting from us Nick ordered the property files, inspected the records, answered buyer questions, astutely positioned the price point with the buyers to optimize our return and was honest in his appraisal of the property, setting clear, balanced expectations for us to plan to as well. Regular, consistent, detailed updates given on progress throughout the entire process.",
+      "context": "International client, rental property sale"
+    },
+    {
+      "client": "Glenda Palmer",
+      "review": "Excellent communicator. Utmost professionalism and knowledge of market. Consistent updates, plenty of reminders and feedback. Knows market for a unique home and attracted over 40 groups to open homes. Works very diligently and displays enormous enthusiasm to get best price."
+    },
+    {
+      "client": "Hayley Kernot & Andrew Pi",
+      "review": "Absolutely Brilliant! Honestly, Nick excelled himself and overcame so many odds with the sale of our house. The strategy he put in place sold the house under difficult circumstances within a two-week deadline. We are still quite amazed."
+    },
+    {
+      "client": "Parkinson family",
+      "review": "Professional, dedicated, proactive and willing to go the extra mile. Right from the first contact, Nick was incredibly quick to deliver and offer any assistance required. The communication and reporting around enquiries and viewings was excellent and honest."
+    }
+  ],
+  "recent_sales_activity": {
+    "status": "Highly active",
+    "recent_properties": [
+      "2/47 South Road, Blagdon - Enquiries Over $420,000",
+      "164A Mangorei Road, Merrilands",
+      "3 Portland Drive, Highlands Park",
+      "50A Paritutu Rd, Spotswood",
+      "4 Ward Pl, Marfell",
+      "1/194 Powderham Street, New Plymouth Central"
+    ],
+    "sales_performance": "Multiple recent successful sales with strong client satisfaction"
+  },
+  "unique_selling_points": {
+    "video_marketing_specialist": "Creates professional video content for property marketing",
+    "digital_marketing_expert": "Award-winning digital marketing approach",
+    "high_national_ranking": "Top 3 salesperson nationally, #1 auction lister",
+    "client_focused": "Available 7 days a week, strong communication",
+    "market_knowledge": "Deep knowledge of Taranaki/New Plymouth market",
+    "negotiation_skills": "Sharp negotiating skills with proven results"
+  },
+  "business_model": {
+    "availability": "7 days per week",
+    "communication_style": "Regular updates, detailed feedback, honest appraisals",
+    "marketing_approach": "Multi-channel including video, social media, traditional advertising",
+    "target_market": "All residential property types across New Plymouth and surrounding areas"
+  },
+  "competitive_advantages": {
+    "national_recognition": "Top-ranked agent in New Zealand",
+    "local_expertise": "Deep Taranaki market knowledge",
+    "modern_marketing": "Video and digital marketing specialist",
+    "client_service": "High availability and communication standards",
+    "proven_results": "Strong track record with measurable client satisfaction"
+  }
+}

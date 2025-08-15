@@ -1,6 +1,6 @@
-// Enhanced Mystic Jeremy Watson App with Advanced Interactivity
+// Enhanced Mystic Nick Hughes App with Advanced Interactivity
 
-class MysticJeremyWatsonApp {
+class MysticNickHughesApp {
   constructor() {
     // Original data preserved
     this.keyPublications = [
@@ -13,13 +13,13 @@ class MysticJeremyWatsonApp {
       {
         name: "Taranaki Daily News",
         reach: "45K local readers",
-        relevance: "Your local market dominance",
+        relevance: "Local market authority in Taranaki",
         logo: "TDN",
       },
       {
         name: "TVNZ1",
         reach: "800K viewers",
-        relevance: "Prime time TV authority",
+        relevance: "Prime time property credibility",
         logo: "TV1",
       },
       {
@@ -109,24 +109,32 @@ class MysticJeremyWatsonApp {
 
     this.testimonials = [
       {
-        name: "Michael Chen",
-        role: "Independent Real Estate Agent, Auckland",
+        name: "Shaun Kearney",
+        role: "International client",
         quote:
-          "After leaving Ray White, Pressence360 helped me get featured in NZ Herald within 30 days. My leads increased 400%.",
-        result: "Featured in 15+ publications",
+          "Without prompting from us Nick ordered the property files, inspected the records, answered buyer questions, astutely positioned the price point and set clear, balanced expectations. Regular, consistent, detailed updates throughout the entire process.",
+        result: "Sales Excellence, Sold",
       },
       {
-        name: "Sarah Williams",
-        role: "Boutique Agency Owner, Wellington",
+        name: "Glenda Palmer",
+        role: "Home seller",
         quote:
-          "Going independent was scary until Pressence360 positioned me as the Wellington luxury expert across all major media.",
-        result: "$50M+ in sales attributed to PR",
+          "Excellent communicator. Utmost professionalism and knowledge of market. Consistent updates, plenty of reminders and feedback. Works very diligently and displays enormous enthusiasm to get best price.",
+        result: "40+ groups to open homes",
       },
       {
-        name: "David Thompson",
-        role: "Former Harcourts Agent, Christchurch",
-        quote: "The day my Stuff article went live, I had 12 new listing enquiries. Best investment I ever made.",
-        result: "300% increase in listing appointments",
+        name: "Hayley Kernot & Andrew Pi",
+        role: "Vendors",
+        quote:
+          "Absolutely Brilliant! Nick excelled himself and overcame so many odds. The strategy sold our house under difficult circumstances within a two-week deadline.",
+        result: "Sold in 2 weeks",
+      },
+      {
+        name: "Parkinson family",
+        role: "Vendors",
+        quote:
+          "Professional, dedicated, proactive and willing to go the extra mile. Communication and reporting around enquiries and viewings was excellent and honest.",
+        result: "Exceeded expectations",
       },
     ]
 
@@ -823,11 +831,11 @@ class MysticJeremyWatsonApp {
     let greeting = ""
 
     if (hour < 12) {
-      greeting = "Good morning, Jeremy"
+      greeting = "Good morning, Nick"
     } else if (hour < 17) {
-      greeting = "Good afternoon, Jeremy"
+      greeting = "Good afternoon, Nick"
     } else {
-      greeting = "Good evening, Jeremy"
+      greeting = "Good evening, Nick"
     }
 
     const heroDescription = document.querySelector(".hero-description")
@@ -839,13 +847,13 @@ class MysticJeremyWatsonApp {
 }
 
 // Initialize the enhanced mystic app
-window.mysticJeremyApp = new MysticJeremyWatsonApp()
+window.nickHughesApp = new MysticNickHughesApp()
 
 
 
 // Enhanced page title effect
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    document.title = "Jeremy Watson - Your Media Authority Awaits | Pressence360"
+    document.title = "Nick Hughes — Media Authority Blueprint | Pressence360"
   }, 3000)
 })
