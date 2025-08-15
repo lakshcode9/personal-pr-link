@@ -912,13 +912,7 @@ class MysticNickHughesApp {
     const hour = new Date().getHours()
     let greeting = ""
 
-    if (hour < 12) {
-      greeting = "Good morning, Nick"
-    } else if (hour < 17) {
-      greeting = "Good afternoon, Nick"
-    } else {
-      greeting = "Good evening, Nick"
-    }
+    greeting = "Hi, Nick"
 
     const heroDescription = document.querySelector(".hero-description")
     if (heroDescription && heroDescription.textContent.indexOf("Good") === -1) {
