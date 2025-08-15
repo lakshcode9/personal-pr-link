@@ -172,6 +172,7 @@ class MysticNickHughesApp {
     this.setupTypingEffect()
     this.addTimeBasedPersonalization()
     this.setupLightbox()
+    this.setupDecisionModal()
     this.startAnimationLoop()
   }
 
@@ -869,6 +870,29 @@ class MysticNickHughesApp {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') close()
     })
+  }
+
+  setupDecisionModal() {
+    const openers = document.querySelectorAll('[data-open-decision]')
+    const closers = document.querySelectorAll('[data-close-decision]')
+    const modal = document.getElementById('decisionModal')
+    if (!modal) return
+
+    const open = () => {
+      modal.classList.add('active')
+      modal.setAttribute('aria-hidden', 'false')
+      this.trackEvent('modal', 'open', 'decision')
+    }
+    const close = () => {
+      modal.classList.remove('active')
+      modal.setAttribute('aria-hidden', 'true')
+      this.trackEvent('modal', 'close', 'decision')
+    }
+
+    openers.forEach((btn) => btn.addEventListener('click', open))
+    closers.forEach((btn) => btn.addEventListener('click', close))
+    modal.addEventListener('click', (e) => { if (e.target === modal) close() })
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close() })
   }
 
   trackEvent(category, action, label) {
