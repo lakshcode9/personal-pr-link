@@ -792,6 +792,22 @@ body {
   max-width: 560px;
 }
 
+/* Unboxing Journey */
+.unboxing-journey {
+  padding: var(--space-3xl) 0;
+}
+.journey-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+.journey-step .step-day {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
 
 
 
