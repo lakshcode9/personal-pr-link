@@ -622,12 +622,15 @@ body, h1, h2, h3, h4, h5, h6,
 /* Mobile optimization for media logos */
 @media (max-width: 768px) {
   .trusted-by {
-    flex-direction: column;
-    gap: var(--space-md);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: center;
     text-align: center;
   }
   
   .trusted-label {
+    width: 100%;
     margin-bottom: var(--space-sm);
   }
   
@@ -636,6 +639,7 @@ body, h1, h2, h3, h4, h5, h6,
     padding: 0 var(--space-md);
     min-width: 120px;
     justify-content: center;
+    flex: 0 0 auto;
   }
   
   .media-logo {
@@ -646,13 +650,15 @@ body, h1, h2, h3, h4, h5, h6,
 
 @media (max-width: 480px) {
   .trusted-by {
-    gap: var(--space-sm);
+    gap: var(--space-xs);
+    flex-wrap: wrap;
   }
   
   .media-badge {
     height: 36px;
     padding: 0 var(--space-sm);
     min-width: 100px;
+    flex: 0 0 auto;
   }
   
   .media-logo {
