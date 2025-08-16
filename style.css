@@ -1103,10 +1103,15 @@ body, h1, h2, h3, h4, h5, h6,
 
   .cta-buttons {
     width: 100%;
+    flex-direction: row;
+    gap: var(--space-sm);
   }
 
   .interactive-btn {
-    width: 100%;
+    flex: 1 1 calc(50% - var(--space-sm));
+    min-width: 140px;
+    font-size: 0.9rem;
+    padding: var(--space-md) var(--space-sm);
   }
 
   .hero-stats {
@@ -1125,6 +1130,17 @@ body, h1, h2, h3, h4, h5, h6,
 
   .section-title {
     font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    gap: var(--space-xs);
+  }
+
+  .interactive-btn {
+    flex: 1 1 calc(50% - var(--space-xs));
+    min-width: 120px;
+    font-size: 0.85rem;
+    padding: var(--space-sm);
   }
 
   .reality-grid,
